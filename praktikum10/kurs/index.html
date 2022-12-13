@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{display: flex;
+                justify-content: center;               
+        }
+        .container table{width: 50%;
+            border:1px solid black ;
+            
+        }
+    </style>
+
+    <script>
+        function kurs(){
+            let nilai = document.getElementById("nilai").value ; 
+            let mata = document.getElementById("matauang").value;
+            let hasil = nilai * mata;
+            console.log(hasil);
+            let daerah_hasil = document.getElementById("nilairupiah")
+            daerah_hasil.innerHTML = hasil
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        masukan nilai
+                    </td>
+                    <td>
+                        mata uang
+                    </td>
+                    <td>
+                        nilai rupiah
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="" id="nilai" onchange="kurs()">
+                    </td>
+                    <td>
+                        <select name="" id="matauang" onchange="kurs()">
+                            <option value="9900">Dollar US</option>
+                            <option value="13472">Dollar Singapore</option>
+                            <option value="874">Ringgit Malaysia</option>
+                            <option value="120">Yen Japan</option>
+                            <option value="15888">Euro</option>
+                            <option value="3592">Riyal Arab</option>
+                        </select>
+                    </td>
+                    <td>
+                        <p id="nilairupiah"></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
